@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './signup.css';
 import { Link } from 'react-router-dom';
-import GetUserProfile from './GetUserProfile';
+// import GetUserProfile from './GetUserProfile';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +9,7 @@ const Signup = () => {
     email: "",
     password: ""
   });
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
   const registerData = async () => {
     try {
@@ -36,7 +36,7 @@ const Signup = () => {
     e.preventDefault();
     const result = await registerData();
     if (result) {
-      setData([...data, result.user]); // Correctly setting the user data in the state
+      // setData([...data, result.user]); // Correctly setting the user data in the state
       setFormData({
         username: "",
         email: "",
@@ -47,7 +47,7 @@ const Signup = () => {
 
   return (
     <div className='maincontainer'>
-      {<GetUserProfile setData={setData}  data={data}    />}
+      {/* {<GetUserProfile setData={setData}  data={data}    />} */}
       <div className='container'>
         <h3>Signup page...</h3>
         <form className="formContainer" onSubmit={handleSubmit}>

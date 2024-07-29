@@ -1,33 +1,13 @@
-.maincontainer{
+.maincontainer {
     display: flex;
     flex-direction: row;
     gap: 10px;
     margin-top: 30px;
-    
-}
-.userPrfile{
-    height: 400px;
-    width: 400px;
-    margin: auto;
-    padding: 8px;
-    border-radius: 10px;
-    box-shadow: 2px 1px 8px ;
-    background-color: aquamarine;
 
 }
-.displayData{
-    height: 300px;
-    width: 400px;
-    margin: auto;
-    padding: 8px;
-    overflow: scroll;
-    overflow-x: hidden;
-    background-color: rgb(221, 214, 228);
-    margin-left: 40px;
-    border-radius: 10px;
 
-}
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     background-color: bisque;
@@ -37,27 +17,31 @@
     margin-top: 30px;
     padding: 8px;
     border-radius: 10px;
-    box-shadow: 2px 1px 8px ;
+    box-shadow: 2px 1px 8px;
 }
-.container h3{
+
+.container h3 {
     background-color: bisque;
     text-align: center;
     margin: auto;
     padding: 4px;
     padding-bottom: 7px;
     border-radius: 10px;
-    box-shadow: 1px 1px 3px ;
+    box-shadow: 1px 1px 3px;
 }
-.formContainer{
+
+.formContainer {
     display: flex;
     flex-direction: column;
 }
-.formContainer label{
+
+.formContainer label {
     margin-left: 32px;
     padding: 5px;
     font-size: 15px;
 }
-.formContainer input{
+
+.formContainer input {
     margin: auto;
     padding: 5px;
     margin-bottom: 5px;
@@ -66,7 +50,8 @@
     font-size: 20px;
     width: 80%;
 }
-.formContainer button{
+
+.formContainer button {
     background-color: rgb(87, 79, 197);
     color: aliceblue;
     font-size: 20px;
@@ -75,50 +60,15 @@
     padding: 4px;
     padding-bottom: 7px;
     border-radius: 10px;
-    box-shadow: 1px 1px 3px ;
+    box-shadow: 1px 1px 3px;
 }
 
-.login{
+.login {
     color: rgb(99, 99, 201);
 }
-.gotologinpage{
+
+.gotologinpage {
     display: flex;
     gap: 5px;
     margin: 10px;
-}
-
-.profile{
-    background-color: rgb(249, 252, 246);
-    padding: 5px;
-    margin: 2px;
-    border-radius: 5px;
-}
-.buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(221, 214, 228);
-    margin: auto;
-    padding: 10px;
-    width: 395px;
-    margin-left: 40px;
-    border-radius: 10px;
-    border: 10px solid rgb(58, 24, 211);
-}
-.buttons button{
-    background-color: rgb(219, 107, 163);
-    color: aliceblue;
-    margin-right: 10px;
-    padding: 5px;
-    margin: 2px;
-    border-radius: 5px;
-    
-}
-.herColor{ 
-    background-color: red;
-    width:411px;
-    margin-top: 20px;
-    margin-left: -8px;
-    height: 10px;
 }

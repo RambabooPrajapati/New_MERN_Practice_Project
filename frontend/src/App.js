@@ -5,6 +5,7 @@ import Contact from './pages/Contact.js';
 import Home from './pages/Home.js';
 import Login from './pages/Login.js';
 import Signup from './pages/Signup.js';
+import GetUserProfile from './pages/GetUserProfile.js';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,6 +14,7 @@ const router = createBrowserRouter(
       <Route path="contact" element={<Contact />} />
       <Route path="about" element={<About />} />
       <Route path="login" element={<Login />} />
+      <Route path='profile' element={<GetUserProfile />} />
       <Route path="signup" element={<Signup />} />
 
     </Route>

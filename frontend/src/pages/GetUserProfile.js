@@ -1,6 +1,9 @@
-import React from 'react'
+import { useState } from 'react';
+import './profile.css';
 
-const GetUserProfile = ({ setData, data }) => {
+const GetUserProfile = () => {
+    const [data, setData] = useState([]);
+    const [message, setMessage] = useState("")
 
     const getUserData = async () => {
         try {
@@ -14,6 +17,7 @@ const GetUserProfile = ({ setData, data }) => {
             }
 
             const result = await response.json();
+            setMessage(result.message)
             console.log("User data:", result);
             setData([result.user]); // Correctly setting the user data in the state
         } catch (error) {
@@ -29,28 +33,21 @@ const GetUserProfile = ({ setData, data }) => {
 
 
     return (
-        <div>
-            <div className='userProfile'>
-                <h2 className="buttons">
-                    <div className='profile'>User Profile</div>
-                    <div>
-                        <button onClick={handleGetData}>Profile </button>
-                        <button> Update </button>
-                        <button>Delete</button>
-                    </div>
-                    <hr className='herColor'/>
-                </h2>
-                <div className='displayData'>
-                    {data.length > 0 ?
-                        data.map(item => (
-                            <ul key={item._id}>
-                                <li>UserName: {item.username}</li>
-                                <li>Email: {item.email}</li>
-                            </ul>
-                        )) : <h3 style={{ color: "red" }}>Not available user information</h3>
-                    }
-
+        <div className='proContainer'>
+            <div className='childContainer'>
+                <h2>User Profile</h2>
+                <div className='buttons'>
+                    <button onClick={handleGetData}>profile</button>
+                    <button>update</button>
+                    <button>delete</button>
                 </div>
+                <div>
+                    {data.length > 0 ? data.map((user) => (<ul>
+                        <li>Username: {user.username}</li>
+                        <li>Email: {user.email}</li>
+                    </ul>)) : <h3>{message}</h3>}
+                </div>
+
             </div>
         </div>
     )

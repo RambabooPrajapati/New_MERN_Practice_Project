@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    box-sizing: content-box;
+}
+.proContainer{
+    background-color: yellow;
+    padding: 60px 0 30px 0;
+}
+.childContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 6px blue;
+    padding-top: 20px;
+}
+.childContainer h2{
+    background-color: white;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px lightblue;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 8px 0;
+    background-color: aqua;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    
+}
+.buttons button{
+    padding: 8px;
+    font-size: 17px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: lightcoral;
+    cursor: pointer;
+    
+}

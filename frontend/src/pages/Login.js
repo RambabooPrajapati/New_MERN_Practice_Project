@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './signup.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +8,7 @@ const Login = () => {
     password: ""
   });
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
 
 
   const loginData = async () => {
@@ -46,6 +47,9 @@ const Login = () => {
         email: "",
         password: ""
       });
+      navigate("/")
+    } else {
+      console.log("Please login !!!!")
     }
   };
 
