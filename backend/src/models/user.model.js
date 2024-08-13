@@ -10,13 +10,20 @@ const userSchema = new Schema({
     },
     email: {
         type: String,
-        trim: true,
         required: true,
+        unique: true,
+        lowercase: true,
+        trim: true,
     },
     password: {
         type: String,
         trim: true,
         required: true,
+    },
+    role: {
+        type: String,
+        enum: ['user', 'admin'],
+        default: 'user',
     },
     refreshToken: {
         type: String,
@@ -34,12 +41,12 @@ userSchema.methods.isPasswordCorrect = async function (password) {
 };
 
 userSchema.methods.generateAccessToken = async function () {
-   return await jwt.sign(
+    return await jwt.sign(
         {
             _id: this._id,
             username: this.username,
             email: this.email,
-        }, 
+        },
         process.env.ACCESS_TOKEN_KEY,
         {
             expiresIn: "1h"
@@ -50,8 +57,8 @@ userSchema.methods.generateRefreshToken = async function () {
     return await jwt.sign(
         {
             _id: this._id
-        }, 
-        process.env.REFRASH_TOKEN_KEY,
+        },
+        process.env.REFRESH_TOKEN_KEY,
         {
             expiresIn: "1d"
         }

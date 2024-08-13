@@ -1,0 +1,8 @@
+.home-container{
+    min-height: 550px;
+    width: auto;
+    background-color: rgb(236, 166, 73);
+    text-align: center;
+    padding-top: 255px;
+    font-size: 100px;
+}

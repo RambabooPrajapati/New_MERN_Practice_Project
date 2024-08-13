@@ -4,6 +4,7 @@ import User from "../models/user.model.js";
 const tokenVerify = async (req, res, next) => {
     try {
         const token = req.cookies?.accessToken || req.headers["authorization"]?.replace("Bearer ", "");
+
         if (!token) {
             return res.status(401).json("You are not authenticated!");
         }
@@ -12,7 +13,6 @@ const tokenVerify = async (req, res, next) => {
         if (!decoded) {
             return res.status(401).json("Invalid token!");
         }
-
         const user = await User.findById(decoded._id);
         req.user = user;
         next();

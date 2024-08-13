@@ -10,7 +10,7 @@ const GetUserProfile = () => {
             const response = await fetch("http://localhost:4000/api/v1/get-user-profile", {
                 credentials: 'include' // Ensure this is included
             });
-
+console.log("------res-------", response)
             if (response.status !== 200) {
                 console.log("Something went wrong while fetching user data");
                 return;

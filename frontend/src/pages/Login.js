@@ -10,7 +10,6 @@ const Login = () => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
 
-
   const loginData = async () => {
     try {
       const response = await fetch('http://localhost:4000/api/v1/login', {
@@ -76,7 +75,7 @@ const Login = () => {
         <input type='submit' />
       </form>
       <div className='gotologinpage'>
-        <span>Have an account?</span><span className="login"><Link to={"/signup"}>Login</Link></span>
+        <span>Have an account?</span><span className="login"><Link to={"/signup"}>Signup</Link></span>
       </div>
     </div>
   );

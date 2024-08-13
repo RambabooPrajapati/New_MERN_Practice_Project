@@ -1,0 +1,8 @@
+.footer-container{
+    min-height: 100px;
+    width: auto;
+    background-color: rgb(10, 10, 10);
+    color: aliceblue;
+    text-align: center;
+    font-size: 100px;
+}
